@@ -1,0 +1,115 @@
+
+#language-select {
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 180px;
+	}
+
+/* rought form styles for when JS is disabled */
+
+#language-select select{
+	display: none;
+	padding: 0;
+	margin: 0;
+	}
+	
+/* JS-created definition list */
+#language-select dt  a {background: url("../images/lang-arrow.jpg") no-repeat scroll right center; color: #007abc;}
+.dropdown dd { position: relative; }
+
+.dropdown a {
+	text-decoration: none;
+	outline: 0;
+	font: 12px Arial, Helvetica, sans-serif;
+	display: block;
+	width: 130px;
+	overflow: hidden;
+	}
+
+.dropdown dt a {
+	background: #c45618;
+	/* border: 1px solid #964315; */
+	padding: 3px 10px 4px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	}
+
+	.dropdown dt a.active {
+		/* background: #db5e18;
+		-webkit-border-bottom-left-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-radius-bottomleft: 0;
+		-moz-border-radius-bottomright: 0;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border-bottom: 1px dotted #676768;
+		-moz-box-shadow: 0 3px 7px rgba(0,0,0,.5);
+		-webkit-box-shadow: 0 3px 7px rgba(0,0,0,.5);
+		box-shadow: 0 3px 7px rgba(0,0,0,.5);
+		color: #fff; */
+		}
+
+.dropdown dd ul {
+	 background: #814f33;
+	/* border: 1px solid #676768; */
+	color: #C5C0B0;
+	display: none;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	padding: 2px 0 5px 0;
+	list-style: none;
+	border-top: none;
+	margin: 0;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,.5);
+	box-shadow: 0 3px 7px rgba(0,0,0,.5);
+	background: #ffffff;
+	}
+
+	.dropdown dd ul li a {
+		padding: 2px 10px;
+		}
+
+	.dropdown dd ul li a span,
+	.dropdown dt a span {
+		float: left;
+		width: 16px;
+		height: 11px;
+		margin: 2px 6px 0 0;
+		background-image: url("../images/flags.png");
+		background-repeat: no-repeat;
+		cursor: pointer;
+		}
+		.vn a span { background-position: -260px -315px }
+		.us a span { background-position: -360px -300px }
+		.uk a span { background-position: -20px -90px }
+		.fr a span { background-position: -340px -75px }
+		.de a span { background-position: -80px -45px }
+		.nl a span { background-position: -220px -195px }
+
+	.dropdown dd ul li a em,
+	.dropdown dt a em {
+		font-style: normal;
+		float: left;
+		width: 100px;
+		cursor: pointer;
+		}
+
+	.dropdown dd ul li a em {
+		/* color: #dbc3b5; */
+		color: #007abc;
+		}
+
+		.dropdown dd ul li a:hover { background-color: rgba(255,255,255,.1); }
+		.dropdown dd ul li a:hover em { color: black; }
