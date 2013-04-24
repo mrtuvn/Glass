@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 01:33 PM
+-- Generation Time: Apr 24, 2013 at 06:23 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `ci2.3`
 --
-
-USE `xmagecom_mrtu1`;
+CREATE DATABASE `ci2.3` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `ci2.3`;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ INSERT INTO `admins` (`id`, `username`, `email`, `status`, `password`) VALUES
 (1, 'mrtu', 'tuna@vnecoms.com', 'inactive', 'admin123'),
 (2, 'admin', 'hungvt_it@gmail.com', 'active', 'admin123'),
 (3, 'hiepnt', 'hiepnt@vnecoms.com', 'inactive', 'admin123'),
-(4, 'mrtux', 'mrtux-hdb@gmail.com', 'active', '123456');
+(4, 'mrtux', 'mrtux-hdb@gmail.com', 'inactive', '123456');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `longdesc` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `parentid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `categories`
@@ -78,7 +78,8 @@ INSERT INTO `categories` (`id`, `name`, `status`, `shortdesc`, `longdesc`, `pare
 (7, 'Top Eyeglass Brands', 'active', 'shortdesc', 'longdesc', 0),
 (8, 'Featured Sunglass Brands', 'active', 'shortdesc', 'longdesc', 0),
 (9, 'Best Prescription Sunglasses', 'active', 'shortdesc', 'longdesc', 0),
-(10, 'Militiary Discounts', 'active', 'shortdesc', 'longdesc', 0);
+(10, 'Militiary Discounts', 'active', 'shortdesc', 'longdesc', 0),
+(11, 'HIGHT LIGHT GLASS', 'inactive', 'new high level ', 'this is long description', 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `option_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `option_values` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `products`
@@ -164,7 +165,10 @@ INSERT INTO `products` (`id`, `name`, `shortdesc`, `longdesc`, `image`, `thumbna
 (13, 'Ray-Baness RB2132 New Wayfarer', 'short desc', 'long description', 'template/images/ContactLensesHomeV2_2_64.jpg', '', 'l', 'black', '1', 'active', 1, 'true', 89.77, 'frames', 'oval,rectangle'),
 (14, 'Ray-Ban RB2132 Protecteye New Wayfarer', 'short desc', 'long description', 'template/images/ContactLensesHomeV2_2_64.jpg', '', 'l', 'red', '1', 'active', 1, 'true', 66.66, 'frames', 'oval,rectangle'),
 (15, 'Glass over brand', 'short desc', 'long description', 'template/images/ContactLensesHomeV2_2_64.jpg', '', 'm', 'red', '1', 'active', 1, 'true', 89.89, 'frames', 'oval,rectangle'),
-(16, 'Ray-Ban RB2132 New Wayfarer 123', 'short desc', 'long description', 'template/images/ContactLensesHomeV2_2_64.jpg', '', 'm', 'blue', '1', 'active', 1, 'true', 89.99, 'frames', 'oval,rectangle');
+(16, 'Ray-Ban RB2132 New Wayfarer 123', 'short desc', 'long description', 'template/images/ContactLensesHomeV2_2_64.jpg', '', 'm', 'blue', '1', 'active', 1, 'true', 89.99, 'frames', 'oval,rectangle'),
+(17, 'oakleyegOAKLEYEG', 'this is shortdescription', 'this is long description here', 'template/images/uploads/oakleyeg.jpg', 'template/images/uploads/thumbs/oakleyeg.jpg', 's', 'red', '1', 'active', 2, 'true', 35.66, '', ''),
+(18, 'oakleysgOAKLEYSG', 'short description', 'long description', 'template/images/uploads/oakleysg.jpg', 'template/images/uploads/thumbs/oakleysg.jpg', 's', 'red', '3', 'active', 1, 'true', 88.45, '', ''),
+(19, 'raybanrxegRAYBANRXEG', 'short description', 'long description', 'template/images/uploads/raybanrxeg.jpg', 'template/images/uploads/thumbs/raybanrxeg.jpg', 's', 'red', '2', 'active', 1, 'true', 77.69, '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
